@@ -1,0 +1,187 @@
+/* Importation de la police Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Importation de tes modules CSS */
+@import 'layout/header.css';
+@import 'layout/footer.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+
+/* Définition de ta charte graphique (Variables) */
+:root {
+    /* Couleurs de fond */
+    --bg-body: #f8fafc;       /* Fond gris très clair de la page */
+    --bg-card: #ffffff;       /* Fond blanc des cartes */
+    
+    /* Couleurs de texte */
+    --text-main: #0f172a;     /* Bleu très foncé/Noir pour les titres */
+    --text-muted: #64748b;    /* Gris pour les sous-titres */
+    
+    /* Couleurs d'accentuation */
+    --primary-color: #0b1120; /* Pour tes boutons (très sombre) */
+    
+    /* Couleurs financières */
+    --color-positive: #16a34a; /* Texte Vert */
+    --bg-positive: #dcfce7;    /* Fond Vert clair pour les badges */
+    --color-negative: #dc2626; /* Texte Rouge */
+    --bg-negative: #fee2e2;    /* Fond Rouge clair pour les badges */
+    
+    /* Structure */
+    --border-color: #e2e8f0;
+    --border-radius: 12px;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Reset CSS basique et application des variables */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: var(--text-main);
+    margin-top: 0;
+}
+
+/* Typographie fluide (Partie C.3 du TP) */
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+/* On centre le contenu avec une largeur maximale */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/* ===============================
+   SECTION HERO 
+=============================== */
+.hero {
+    padding: 6rem 0 4rem 0;
+    max-width: 700px; /* Empêche le texte de s'étirer sur tout l'écran */
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* ===============================
+   SECTION DASHBOARD & GRILLE 
+=============================== */
+.dashboard-preview {
+    padding: 4rem 0;
+    text-align: center; /* Pour centrer le titre "Your wealth at a glance" */
+}
+
+.dashboard-preview h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* La fameuse Grille CSS demandée par le TP */
+.grid-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; /* Sur mobile : 1 seule colonne */
+    text-align: left; /* On remet le texte à gauche dans les cartes */
+    margin-top: 3rem;
+}
+
+/* À partir des tablettes/PC : 3 colonnes de taille égale */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Style de la liste des transactions */
+.recent-transactions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-transactions li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.recent-transactions li:last-child {
+    border-bottom: none;
+}
+
+/* ===============================
+   SECTION TABLEAU (Portfolio)
+=============================== */
+.asset-table-section {
+    padding: 2rem 0 4rem 0;
+}
+
+.table-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Permet d'arrondir les coins du tableau */
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges de pourcentages (comme sur ta maquette) */
+.text-green {
+    color: var(--color-positive);
+    background-color: var(--bg-positive);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.text-red {
+    color: var(--color-negative);
+    background-color: var(--bg-negative);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}

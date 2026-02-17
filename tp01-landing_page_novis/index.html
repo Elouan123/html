@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Novis - Professional wealth management platform designed for modern investors.">
+    <title>Novis | Mastering your wealth</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="logo">Novis</div>
+            <ul>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="btn-primary" aria-label="Access Client Area">Client Area</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Mastering your wealth with confidence</h1>
+            <p>Professional wealth management platform designed for modern investors. Track, analyze, and optimize your portfolio with institutional-grade tools.</p>
+            <button class="btn-primary">Get Started &rarr;</button>
+        </section>
+
+        <section id="dashboard" class="dashboard-preview">
+            <h2>Your wealth at a glance</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Real-time insights and comprehensive portfolio tracking</p>
+            
+            <div class="grid-container">
+                <article class="card total-balance">
+                    <h3>Total Balance</h3>
+                    <p class="amount">€142,500</p>
+                </article>
+                
+                <article class="card asset-allocation">
+                    <h3>Asset Allocation</h3>
+                    <div class="pie-chart" aria-label="Asset allocation chart"></div>
+                </article>
+
+                <article class="card recent-transactions">
+                    <h3>Recent Transactions</h3>
+                    <ul>
+                        <li>Buy &middot; AAPL <span>+150 shares</span></li>
+                        <li>Dividends &middot; LVMH <span class="text-green">+ €145</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="assets" class="asset-table-section">
+            <h2>Portfolio Holdings</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Complete overview of your investment positions</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Asset</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>24H Evolution</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Bitcoin</strong><br>
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">BTC</span>
+                            </td>
+                            <td>2.45</td>
+                            <td>€48,234.00</td>
+                            <td><span class="text-green">&nearrow; +8.24%</span></td>
+                            <td>€118,173.30</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Apple Inc.</strong><br>
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">AAPL</span>
+                            </td>
+                            <td>150</td>
+                            <td>€172.50</td>
+                            <td><span class="text-red">&searrow; -2.15%</span></td>
+                            <td>€25,875.00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Microsoft Corp.</strong><br>
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">MSFT</span>
+                            </td>
+                            <td>85</td>
+                            <td>€385.20</td>
+                            <td><span class="text-green">&nearrow; +5.67%</span></td>
+                            <td>€32,742.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
