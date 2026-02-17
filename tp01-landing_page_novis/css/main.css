@@ -1,36 +1,24 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 
 @import 'layout/header.css';
 @import 'layout/footer.css';
 @import 'components/buttons.css';
 @import 'components/cards.css';
 
-
 :root {
- 
-    --bg-body: #f8fafc;     
-    --bg-card: #ffffff;       
-    
-    
-    --text-main: #0f172a;   
-    --text-muted: #64748b;   
-    
-    
-    --primary-color: #0b1120; 
-    
-
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --primary-color: #0b1120;
     --color-positive: #16a34a;
-    --bg-positive: #dcfce7;    
+    --bg-positive: #dcfce7;
     --color-negative: #dc2626;
-    --bg-negative: #fee2e2;    
- 
+    --bg-negative: #fee2e2;
     --border-color: #e2e8f0;
     --border-radius: 12px;
     --font-main: 'Inter', sans-serif;
 }
-
 
 * {
     box-sizing: border-box;
@@ -56,7 +44,6 @@ h1 {
     letter-spacing: -0.02em;
     margin-bottom: 1rem;
 }
-
 
 main {
     max-width: 1200px;
@@ -84,7 +71,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-
 .grid-container {
     display: grid;
     gap: 1.5rem;
@@ -93,13 +79,11 @@ main {
     margin-top: 3rem;
 }
 
-
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
 
 .recent-transactions ul {
     list-style: none;
@@ -173,4 +157,15 @@ tr:last-child td {
     padding: 0.25rem 0.5rem;
     border-radius: 6px;
     font-size: 0.875rem;
+}
+
+tbody tr {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
