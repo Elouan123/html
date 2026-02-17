@@ -1,38 +1,37 @@
-/* Importation de la police Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Importation de tes modules CSS */
+
 @import 'layout/header.css';
 @import 'layout/footer.css';
 @import 'components/buttons.css';
 @import 'components/cards.css';
 
-/* Définition de ta charte graphique (Variables) */
+
 :root {
-    /* Couleurs de fond */
-    --bg-body: #f8fafc;       /* Fond gris très clair de la page */
-    --bg-card: #ffffff;       /* Fond blanc des cartes */
+ 
+    --bg-body: #f8fafc;     
+    --bg-card: #ffffff;       
     
-    /* Couleurs de texte */
-    --text-main: #0f172a;     /* Bleu très foncé/Noir pour les titres */
-    --text-muted: #64748b;    /* Gris pour les sous-titres */
     
-    /* Couleurs d'accentuation */
-    --primary-color: #0b1120; /* Pour tes boutons (très sombre) */
+    --text-main: #0f172a;   
+    --text-muted: #64748b;   
     
-    /* Couleurs financières */
-    --color-positive: #16a34a; /* Texte Vert */
-    --bg-positive: #dcfce7;    /* Fond Vert clair pour les badges */
-    --color-negative: #dc2626; /* Texte Rouge */
-    --bg-negative: #fee2e2;    /* Fond Rouge clair pour les badges */
     
-    /* Structure */
+    --primary-color: #0b1120; 
+    
+
+    --color-positive: #16a34a;
+    --bg-positive: #dcfce7;    
+    --color-negative: #dc2626;
+    --bg-negative: #fee2e2;    
+ 
     --border-color: #e2e8f0;
     --border-radius: 12px;
     --font-main: 'Inter', sans-serif;
 }
 
-/* Reset CSS basique et application des variables */
+
 * {
     box-sizing: border-box;
 }
@@ -51,7 +50,6 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-/* Typographie fluide (Partie C.3 du TP) */
 h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.2;
@@ -59,18 +57,16 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* On centre le contenu avec une largeur maximale */
+
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
-/* ===============================
-   SECTION HERO 
-=============================== */
+
 .hero {
     padding: 6rem 0 4rem 0;
-    max-width: 700px; /* Empêche le texte de s'étirer sur tout l'écran */
+    max-width: 700px;
 }
 
 .hero p {
@@ -79,35 +75,32 @@ main {
     margin-bottom: 2rem;
 }
 
-/* ===============================
-   SECTION DASHBOARD & GRILLE 
-=============================== */
 .dashboard-preview {
     padding: 4rem 0;
-    text-align: center; /* Pour centrer le titre "Your wealth at a glance" */
+    text-align: center;
 }
 
 .dashboard-preview h2 {
     margin-bottom: 0.5rem;
 }
 
-/* La fameuse Grille CSS demandée par le TP */
+
 .grid-container {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 1fr; /* Sur mobile : 1 seule colonne */
-    text-align: left; /* On remet le texte à gauche dans les cartes */
+    grid-template-columns: 1fr;
+    text-align: left;
     margin-top: 3rem;
 }
 
-/* À partir des tablettes/PC : 3 colonnes de taille égale */
+
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Style de la liste des transactions */
+
 .recent-transactions ul {
     list-style: none;
     padding: 0;
@@ -127,9 +120,6 @@ main {
     border-bottom: none;
 }
 
-/* ===============================
-   SECTION TABLEAU (Portfolio)
-=============================== */
 .asset-table-section {
     padding: 2rem 0 4rem 0;
 }
@@ -138,7 +128,7 @@ main {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    overflow: hidden; /* Permet d'arrondir les coins du tableau */
+    overflow: hidden;
     margin-top: 1.5rem;
 }
 
@@ -169,7 +159,6 @@ tr:last-child td {
     border-bottom: none;
 }
 
-/* Badges de pourcentages (comme sur ta maquette) */
 .text-green {
     color: var(--color-positive);
     background-color: var(--bg-positive);

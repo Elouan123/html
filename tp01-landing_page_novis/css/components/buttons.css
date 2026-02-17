@@ -13,5 +13,5 @@
 
 .btn-primary:hover {
     opacity: 0.9;
-    transform: translateY(-2px); /* Micro-interaction demandée dans le TP */
+    transform: translateY(-2px);
 }
